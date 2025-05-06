@@ -5,12 +5,13 @@
     <title>Personal Website</title>
     <link rel="stylesheet" href="baru.css"/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
  
 <body>
     <section>
         <nav>
-            <a href="#" class="logo">DEANZ</a>
             <ul>
                 <li><a href="#helo">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -24,102 +25,108 @@
             <p>Iam Rahadyan Danang, </p>
             <p>From PENS 2023.</p>
             <p>Majoring in informatics Engineering,</p>
-            <p>Welcome to my Website.</p>
+            <p>Welcome to my Porto.</p>
         </div>
     
-        <img alt="model" class="model" src="d2.jpg">  
+        <img alt="model" class="model" src="danang.jpg">  
     </section>
  
     <div id="skills"></div>
     <div class="services">
-        
-        <div class="services-text ">
-            <p>Skills</p>
-            <p>Saya memiliki beberapa skills yang sangat membantu dalam keseharian saya. Mulai dari skill programming hingga skill beladiri.</p>
+        <div class="services-text">
+            <p class="title">Skills</p>
+            <p class="subtitle">Berikut beberapa keahlian yang saya miliki</p>
         </div>
-         
+        
         <div class="box-container">
-            <div class="box-1">
+            <div class="box">
                 <span>1</span>
-                <p class="heading">Bahasa C</p>
-                <p class="details">Saya memahami bahasa C dengan baik</p>
-                <a href="https://en.wikipedia.org/wiki/C_(programming_language)">Read More</a>
+                <p class="heading">Web Development</p>
+                <p class="details">Saya memahami Express dan React dengan baik, serta dapat mengembangkan aplikasi web dengan baik</p>
             </div>
-       
-            <div class="box-2">
+        
+            <div class="box">
                 <span>2</span>
-                <p class="heading">HTML dan CSS</p>
-                <p class="details">Saya memahami HTML dan CSS dengan baik</p>
-                <a href="https://en.wikipedia.org/wiki/HTML">Read More</a>
+                <p class="heading">Mobile Development</p>
+                <p class="details">Saya memahami Flutter dengan baik dan dapat mengembangkan aplikasi mobile</p>
             </div>
         
-            <div class="box-3">
+            <div class="box">
                 <span>3</span>
-                <p class="heading">Martial Arts</p>
-                <p class="details">Saya menguasai beberapa seni beladiri antara lain Karate, Taekwondo dan Tinju</p>
-                <a href="https://en.wikipedia.org/wiki/Martial_arts">Read More</a>
+                <p class="heading">Database</p>
+                <p class="details">Saya memahami MySQL dan MongoDB dengan baik</p>
             </div>
-        </div>
-    </div>
-     
-    <div id="porto"></div>
-    <div class="testimoni">
-       
-        <div class="testimoni-text ">
-            <p>Portofolio</p>
+        
+            <div class="box">
+                <span>4</span>
+                <p class="heading">REST API</p>
+                <p class="details">Saya dapat membuat sebuah API menggunakan Express</p>
+            </div>
+        
+            <div class="box">
+                <span>5</span>
+                <p class="heading">Komunikasi dan Kolaborasi</p>
+                <p class="details">Saya dapat berkomunikasi dan berkolaborasi dengan tim menggunakan GitHub dan beberapa aplikasi terkait</p>
+            </div>
         </div>        
- 
-        <div class="testimoni-col">
-            <div class="testimoni-1">
-                <img src="c2.jpg" height="40px">
-                <div>
-                    <p>Berikut adalah hasi pengerjaan saya</p>
-                    <h3>C-language</h3>
-                    <a href="https://drive.google.com/drive/folders/1cH6qO3EPWPWN3sUbnZe1Uwei75pp_fMA?usp=sharing">Work</a>
-                </div>
-            </div>
- 
-            <div class="testimoni-2">
-                <img src="htmlcss.jpg" height="50px">
-                <div>
-                    <p>Berikut adalah hasil pengerjaan saya</p>
-                    <h3>HTML and CSS</h3>
-                    <a href="file:///C:/Users/LENOVO/Documents/Tugas%20Workshop%20Web%20(%20P.%20Joko%20)/Pekan%203/tugaspekan3.html">Pekan ke-3</a>
-                    <a href="file:///C:/Users/LENOVO/Documents/Tugas%20Workshop%20Web%20(%20P.%20Joko%20)/pekan%204/tugaspekan4.html">Pekan ke-4</a>
-                    <a href="file:///C:/Users/LENOVO/Documents/Tugas%20Workshop%20Web%20(%20P.%20Joko%20)/Pekan%205/tugaspekan5.html">Pekan ke-5</a>
-                    <a href="file:///C:/Users/LENOVO/Documents/Tugas%20Workshop%20Web%20(%20P.%20Joko%20)/Pekan%206/latihanpekan6.html">Pekan ke-6</a>
-                    
-                </div>
-            </div>
-        </div>
+     
+   <!-- PORTFOLIO SECTION -->
+<div class="portfolio">
+    <div class="portfolio-title">
+      <p>My Project Portfolio</p>
     </div>
-    <div id="galeri"></div>
-    <section class="galeri">
-        <div class="foto">
-            <img src="jagoan.jpg" width="200px" height="300px">
-            <img src="aesthetic.jpg" width="300px" height="200px">
-            <img src="grad.jpg" width="300px" height="250px">
-            <img src="king.jpg" width="300px" height="200px">
-            <img src="pache.jpg" width="200px" height="300px">
+  
+    <div class="portfolio-row">
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <img src="luluu.jpg" alt="Project 1" />
+        <div>
+          <h3>Lulusin</h3>
+          <p>Lulusin adalah sebuah aplikasi try out UTBK yang menyediakan fitur pembuatan try out untuk guru dan fitur pengerjaan try out untuk siswa. Peran saya dalam proyek ini adalah mengintegrasikan react sebagai sisi front-end dengan Express sebagi sisi back-end.</p>
         </div>
-    </section>
- 
-    
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <img src="editi.jpg" alt="Project 2" />
+        <div>
+          <h3>Editi</h3>
+          <p>Editi adalah sebuah aplikasi web untuk manajemen pembelajaran, mencakup fitur presensi hingga pengumpulan tugas. Dalam projek ini, saya bertanggung jawab pada pengembangan sisi back-end dengan menggunakan Express.</p>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <img src="this.jpg" alt="Project 3" />
+        <div>
+          <h3>THIS</h3>
+          <p>THIS adalah sebuah aplikasi manajemen sampah yang menangani pelaporan sampah bersifat komersial maupun non-komersial. Dalam proyek ini, saya bertanggung jawab pada pengembangan sisi back-end.</p>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="portfolio-card">
+        <img src="luluu.jpg" alt="Project 4" />
+        <div>
+          <h3>Lulusin Mobile</h3>
+          <p>Versi mobile dari aplikasi lulusin yang dikembangkan dengan flutter.</p>
+        </div>
+      </div>
+    </div>
+  </div>  
     <footer>
-        <p>Hubungi Saya Bila Perlu</p>
-             
-        
-        <p>Berikut adalah sosial media saya</p>
-        
+        <p>Kontak Saya</p>
         <div class="social-icons">
-            <a href="https://wa.me/(6281235163528)"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6281235163528" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/rzr_shirogane" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
          
         
         <p class="copyright">Rahadyan Danang Susetyo Pranawa</p>
-        <p class="copyrights">3123522018</p>
     </footer>
 </body>
 </html>
