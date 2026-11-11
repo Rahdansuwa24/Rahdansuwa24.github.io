@@ -1,0 +1,51 @@
+import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { ThemeProvider } from '../context/ThemeContext';
+import Navbar from '../components/layout/Navbar';
+import Hero from '../components/sections/Hero';
+
+describe('Navbar and Hero Component Integration', () => {
+  it('renders brand identity, navigation links, and valid resume link', () => {
+    render(
+      <ThemeProvider>
+        <Navbar />
+        <Hero />
+      </ThemeProvider>
+    );
+
+    // Navbar tests with exact name matching
+    expect(screen.getByText(/Rahadyan Danang/i)).toBeDefined();
+    expect(screen.getByRole('link', { name: /^Architecture$/i })).toHaveAttribute('href', '#architecture');
+    expect(screen.getByRole('link', { name: /^Projects$/i })).toHaveAttribute('href', '#projects');
+    expect(screen.getByRole('link', { name: /^Capabilities$/i })).toHaveAttribute('href', '#skills');
+    expect(screen.getByRole('link', { name: /^Experience$/i })).toHaveAttribute('href', '#experience');
+    
+    const resumeLinks = screen.getAllByRole('link', { name: /Resume/i });
+    expect(resumeLinks[0]).toHaveAttribute('href', '/resume.pdf');
+
+    // Hero tests
+    expect(screen.getByText(/3 Cloud Microservices Deployed on Azure VM/i)).toBeDefined();
+    expect(screen.getByText(/Software Engineer & Backend Specialist/i)).toBeDefined();
+    expect(screen.getByRole('link', { name: /Explore Architecture/i })).toHaveAttribute('href', '#architecture');
+    expect(screen.getByRole('link', { name: /View Projects/i })).toHaveAttribute('href', '#projects');
+  });
+
+  it('toggles mobile menu when hamburger button is clicked', () => {
+    render(
+      <ThemeProvider>
+        <Navbar />
+      </ThemeProvider>
+    );
+
+    const menuButton = screen.getByLabelText(/Toggle Navigation Menu/i);
+    expect(menuButton).toBeDefined();
+
+    // Open mobile menu
+    fireEvent.click(menuButton);
+    expect(screen.getByTestId('mobile-menu')).toBeDefined();
+
+    // Close mobile menu
+    fireEvent.click(menuButton);
+    expect(screen.queryByTestId('mobile-menu')).toBeNull();
+  });
+});
