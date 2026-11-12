@@ -15,7 +15,6 @@ describe('Navbar and Hero Component Integration', () => {
 
     // Navbar tests with exact name matching
     expect(screen.getAllByText(/Rahadyan Danang/i)[0]).toBeDefined();
-    expect(screen.getByRole('link', { name: /^Architecture$/i })).toHaveAttribute('href', '#architecture');
     expect(screen.getByRole('link', { name: /^Projects$/i })).toHaveAttribute('href', '#projects');
     expect(screen.getByRole('link', { name: /^Capabilities$/i })).toHaveAttribute('href', '#skills');
     expect(screen.getByRole('link', { name: /^Experience$/i })).toHaveAttribute('href', '#experience');
@@ -24,10 +23,9 @@ describe('Navbar and Hero Component Integration', () => {
     expect(resumeLinks[0]).toHaveAttribute('href', '/resume.pdf');
 
     // Hero tests
-    expect(screen.getByText(/3 Cloud Microservices Deployed on Azure VM/i)).toBeDefined();
     expect(screen.getByText(/Software Engineer & Backend Specialist/i)).toBeDefined();
-    expect(screen.getByRole('link', { name: /Explore Architecture/i })).toHaveAttribute('href', '#architecture');
-    expect(screen.getByRole('link', { name: /View Projects/i })).toHaveAttribute('href', '#projects');
+    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute('href', 'https://github.com/Rahdansuwa24');
+    expect(screen.getByRole('link', { name: /Send Email/i })).toHaveAttribute('href', 'mailto:rahadyandanang27@gmail.com');
   });
 
   it('toggles mobile menu when hamburger button is clicked', () => {

@@ -2,7 +2,6 @@ import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
-import ArchitectureSection from './components/sections/ArchitectureSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import TechRadarSection from './components/sections/TechRadarSection';
 import ExperienceSection from './components/sections/ExperienceSection';
@@ -16,7 +15,6 @@ export const App: React.FC = () => {
           <Navbar />
           <main id="main-content">
             <Hero />
-            <ArchitectureSection />
             <ProjectsSection />
             <TechRadarSection />
             <ExperienceSection />

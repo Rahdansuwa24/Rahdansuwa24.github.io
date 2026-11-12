@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('dewaruci393@gmail.com');
+    navigator.clipboard.writeText('rahadyandanang27@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
                 {/* Email with copy action */}
                 <div className="relative">
                   <a
-                    href="mailto:dewaruci393@gmail.com"
+                    href="mailto:rahadyandanang27@gmail.com"
                     aria-label="Send Email"
                     className="p-3 rounded-2xl bg-slate-800/80 hover:bg-cyan-600/20 border border-slate-700 hover:border-cyan-500/50 text-white transition-all min-h-[48px] flex items-center gap-3 text-left group"
                   >
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
                     </div>
                     <div className="overflow-hidden">
                       <div className="text-[10px] font-mono text-slate-400">EMAIL</div>
-                      <div className="text-xs font-bold text-white truncate">dewaruci393</div>
+                      <div className="text-xs font-bold text-white truncate">rahadyandanang27</div>
                     </div>
                   </a>
                   <button

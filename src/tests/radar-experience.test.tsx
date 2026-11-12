@@ -31,7 +31,7 @@ describe('TechRadar, Experience, and Footer Integration', () => {
     expect(screen.getByText(/Let's Build High-Performance Systems/i)).toBeDefined();
 
     const emailLink = screen.getByRole('link', { name: /Send Email/i });
-    expect(emailLink).toHaveAttribute('href', 'mailto:dewaruci393@gmail.com');
+    expect(emailLink).toHaveAttribute('href', 'mailto:rahadyandanang27@gmail.com');
 
     const whatsappLink = screen.getByRole('link', { name: /WhatsApp Chat/i });
     expect(whatsappLink).toHaveAttribute('href', expect.stringContaining('wa.me'));

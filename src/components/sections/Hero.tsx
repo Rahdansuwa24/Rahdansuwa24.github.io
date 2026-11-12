@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Github, Linkedin, Mail, Server, Terminal, Shield } from 'lucide-react';
+import { Github, Linkedin, Mail, Terminal, Shield } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -9,116 +9,8 @@ export const Hero: React.FC = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-rose-900/10 dark:bg-rose-900/20 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      {/* Screen 1 Cover Banner - Inspired by Image 2 Reference */}
-      <div className="relative mb-12 p-6 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-slate-900/90 via-[#0A1124] to-[#060913] border border-cyan-500/20 shadow-[0_0_50px_rgba(6,182,212,0.15)] backdrop-blur-xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Framed Photo in Capsule / Arch Shape (Matching Screen 1 of Reference) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="relative group">
-              
-              {/* Outer Glow & Crimson / Cyan Capsule Ring */}
-              <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-r from-rose-600 via-purple-600 to-cyan-500 opacity-60 group-hover:opacity-100 blur-lg transition duration-500"></div>
-              
-              {/* Capsule Container */}
-              <div className="relative w-64 sm:w-72 md:w-80 h-80 sm:h-96 rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-rose-950 via-[#120B1C] to-[#0A1020] border-2 border-rose-500/30 flex items-end justify-center shadow-2xl">
-                
-                {/* User Portrait Photo */}
-                <img 
-                  src="/danang.jpg" 
-                  alt="Rahadyan Danang Susetyo Pranawa" 
-                  className="w-full h-full object-cover object-top filter brightness-105 contrast-105"
-                  loading="eager"
-                />
-
-                {/* Subtle dark gradient overlay at bottom for cinematic blend */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-transparent opacity-60"></div>
-                
-                {/* Monogram Badge Overlay */}
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white font-mono text-[11px] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                  PENS INFORMATICS
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* Typography & Editorial Cover Content */}
-          <div className="lg:col-span-7 flex flex-col justify-center text-left">
-            
-            {/* Live Cloud Status Banner */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-4 w-fit">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>3 Cloud Microservices Deployed on Azure VM</span>
-            </div>
-
-            {/* Huge Display Heading (Matching PORTFOLIO 2026 Reference) */}
-            <div className="flex flex-wrap items-baseline gap-3 mb-2">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white uppercase font-sans">
-                PORTFOLIO
-              </h1>
-              <span className="text-3xl sm:text-5xl md:text-6xl font-extralight tracking-widest text-cyan-400/90 font-mono">
-                2026
-              </span>
-            </div>
-
-            {/* Sub-label inspired by ■ CONTENT CREATOR */}
-            <div className="flex items-center gap-2 text-cyan-300 font-mono text-xs sm:text-sm tracking-widest uppercase mb-6">
-              <span className="inline-block w-2.5 h-2.5 bg-cyan-400 shadow-[0_0_8px_#38bdf8]"></span>
-              <span>SOFTWARE ENGINEER // BACKEND & CLOUD SYSTEMS</span>
-            </div>
-
-            {/* Role Header required for test assertions */}
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-100 tracking-tight mb-4">
-              Software Engineer & Backend Specialist{' '}
-              <span className="text-cyan-400 block sm:inline">
-                with Generative AI Integration.
-              </span>
-            </h2>
-
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6 max-w-2xl">
-              Applied Bachelor of Informatics Engineering student at Politeknik Elektronika Negeri Surabaya (PENS).
-              Specialized in production backend architecture, distributed databases (TiDB Cloud Serverless),
-              asynchronous worker queues, and medical AI inference microservices (ONNX Runtime & Orthanc PACS).
-            </p>
-
-            {/* Navigation & Action Triggers */}
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                href="#architecture"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(6,182,212,0.4)] min-h-[44px]"
-              >
-                <Server className="w-4 h-4" />
-                <span>Explore Architecture</span>
-              </a>
-
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-all min-h-[44px]"
-              >
-                <span>View Projects</span>
-                <ArrowDown className="w-4 h-4" />
-              </a>
-
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-transparent hover:bg-white/5 border border-slate-700 text-cyan-300 font-semibold text-xs transition-colors min-h-[44px]"
-              >
-                <span>Contact</span>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-      {/* Screen 2 Profile & About Section - Matching Image 2 Two-Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+      {/* Profile & About Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
         
         {/* Left Column: Portrait, Education & Language */}
         <div className="lg:col-span-5 space-y-6">
@@ -128,9 +20,12 @@ export const Hero: React.FC = () => {
             <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
               HELLO, I AM
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-950 dark:text-white tracking-tight mb-4">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-950 dark:text-white tracking-tight mb-2">
               RAHADYAN DANANG
-            </h3>
+            </h1>
+            <div className="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-semibold mb-4">
+              Software Engineer & Backend Specialist
+            </div>
             
             {/* Styled Portrait with Back-Glow */}
             <div className="relative rounded-2xl overflow-hidden bg-slate-950 border border-cyan-500/30 mb-5 aspect-[4/5] max-h-80 shadow-[0_0_30px_rgba(6,182,212,0.2)]">
@@ -171,7 +66,7 @@ export const Hero: React.FC = () => {
               </a>
 
               <a
-                href="mailto:dewaruci393@gmail.com"
+                href="mailto:rahadyandanang27@gmail.com"
                 aria-label="Send Email"
                 className="p-2.5 rounded-xl border border-stroke-light dark:border-slate-800 text-gray-700 dark:text-gray-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
@@ -205,7 +100,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Language Communication Block (Matching Image 2 Reference) */}
+          {/* Language Communication Block */}
           <div className="p-6 rounded-2xl bg-surface-light dark:bg-slate-900/70 border border-stroke-light dark:border-slate-800 text-left">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-4 flex items-center gap-2">
               <Terminal className="w-4 h-4" />
@@ -215,15 +110,6 @@ export const Hero: React.FC = () => {
               <div>
                 <div className="flex justify-between text-gray-700 dark:text-gray-300 mb-1">
                   <span>INDONESIA (Native)</span>
-                  <span className="font-mono text-cyan-400">100%</span>
-                </div>
-                <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
-                  <div className="h-full bg-cyan-500 rounded-full" style={{ width: '100%' }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between text-gray-700 dark:text-gray-300 mb-1">
-                  <span>JAWA (Native)</span>
                   <span className="font-mono text-cyan-400">100%</span>
                 </div>
                 <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
@@ -263,7 +149,7 @@ export const Hero: React.FC = () => {
             </p>
           </div>
 
-          {/* Software Skills Grid (Matching Reference App-Icon Grid) */}
+          {/* Software Skills Grid */}
           <div className="p-6 sm:p-8 rounded-2xl bg-surface-light dark:bg-slate-900/70 border border-stroke-light dark:border-slate-800">
             <div className="flex items-center justify-between mb-4">
               <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
@@ -395,26 +281,6 @@ export const Hero: React.FC = () => {
 
         </div>
 
-      </div>
-
-      {/* Cloud Environment Highlights Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-stroke-light dark:border-slate-800 text-left">
-        <div className="p-3.5 rounded-xl bg-surface-light dark:bg-slate-900/50 border border-stroke-light dark:border-slate-800">
-          <div className="font-mono text-xs text-gray-500 dark:text-gray-400">EDGE CDN</div>
-          <div className="font-semibold text-sm text-gray-900 dark:text-gray-100 mt-0.5">Cloudflare Pages</div>
-        </div>
-        <div className="p-3.5 rounded-xl bg-surface-light dark:bg-slate-900/50 border border-stroke-light dark:border-slate-800">
-          <div className="font-mono text-xs text-gray-500 dark:text-gray-400">HOST & PROXY</div>
-          <div className="font-semibold text-sm text-gray-900 dark:text-gray-100 mt-0.5">Azure VM + Caddy</div>
-        </div>
-        <div className="p-3.5 rounded-xl bg-surface-light dark:bg-slate-900/50 border border-stroke-light dark:border-slate-800">
-          <div className="font-mono text-xs text-gray-500 dark:text-gray-400">DATABASE</div>
-          <div className="font-semibold text-sm text-gray-900 dark:text-gray-100 mt-0.5">TiDB Serverless</div>
-        </div>
-        <div className="p-3.5 rounded-xl bg-surface-light dark:bg-slate-900/50 border border-stroke-light dark:border-slate-800">
-          <div className="font-mono text-xs text-gray-500 dark:text-gray-400">OBJECT MEDIA</div>
-          <div className="font-semibold text-sm text-gray-900 dark:text-gray-100 mt-0.5">Cloudflare R2</div>
-        </div>
       </div>
 
     </section>
