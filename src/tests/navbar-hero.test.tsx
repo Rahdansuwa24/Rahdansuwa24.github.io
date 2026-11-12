@@ -14,7 +14,7 @@ describe('Navbar and Hero Component Integration', () => {
     );
 
     // Navbar tests with exact name matching
-    expect(screen.getByText(/Rahadyan Danang/i)).toBeDefined();
+    expect(screen.getAllByText(/Rahadyan Danang/i)[0]).toBeDefined();
     expect(screen.getByRole('link', { name: /^Architecture$/i })).toHaveAttribute('href', '#architecture');
     expect(screen.getByRole('link', { name: /^Projects$/i })).toHaveAttribute('href', '#projects');
     expect(screen.getByRole('link', { name: /^Capabilities$/i })).toHaveAttribute('href', '#skills');

@@ -1,4 +1,11 @@
 export type ProjectStatus = 'demo-ready' | 'in-progress';
+export type DeploymentType = 'live' | 'private' | 'restricted';
+
+export interface ScreenshotSlot {
+  label: string;
+  caption: string;
+  imagePath?: string;
+}
 
 export interface ProjectLink {
   label: string;
@@ -23,6 +30,10 @@ export interface Project {
   architectureDetails: string;
   tradeoffs: string;
   links: ProjectLink[];
+  liveUrl?: string;
+  deploymentType: DeploymentType;
+  deploymentNote: string;
+  screenshotSlots: ScreenshotSlot[];
 }
 
 export interface ArchitectureNode {
