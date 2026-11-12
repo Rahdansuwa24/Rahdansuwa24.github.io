@@ -82,6 +82,17 @@ export const Navbar: React.FC = () => {
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
           
+          {/* Visual CV Showcase Link */}
+          <a
+            href="/cv.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-xl border border-cyan-500/40 text-cyan-600 dark:text-cyan-300 hover:bg-cyan-500/10 transition-colors min-h-[44px]"
+            title="Buka Visual CV dengan Screenshot Projek"
+          >
+            <span>Visual CV</span>
+          </a>
+
           {/* Download Resume Button */}
           <a
             href="/resume.pdf"
@@ -133,7 +144,15 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
           </div>
-          <div className="pt-3 border-t border-stroke-light dark:border-slate-800">
+          <div className="pt-3 border-t border-stroke-light dark:border-slate-800 flex flex-col gap-2">
+            <a
+              href="/cv.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold rounded-xl border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 transition-colors min-h-[44px]"
+            >
+              <span>Lihat Visual CV (Screenshot Showcase)</span>
+            </a>
             <a
               href="/resume.pdf"
               download="Rahadyan-Danang-Resume.pdf"

@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Rahadyan Danang Susetyo Pranawa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #0B1120;
+      --card-bg: #111B30;
+      --card-border: #1E293B;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --cyan: #06B6D4;
+      --cyan-light: #38BDF8;
+      --emerald: #10B981;
+      --amber: #F59E0B;
+      --blue: #3B82F6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #070B14;
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 24px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--bg-page);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 36px 40px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Top Controls */
+    .top-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, #06b6d4);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+    }
+
+    .btn-secondary:hover {
+      background: #334155;
+    }
+
+    /* Header Profile */
+    .header-profile {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 28px;
+      align-items: center;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 28px;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 140px;
+      height: 160px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--cyan);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
+      background: #020617;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .profile-info h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item a {
+      color: var(--cyan-light);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styles */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    }
+
+    .section-title::before {
+      content: '//';
+      color: var(--cyan-light);
+    }
+
+    .summary-text {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* Skills Grid */
+    .skills-block {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .skill-cat-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cyan-light);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #1e293b;
+      color: #f1f5f9;
+      border: 1px solid #334155;
+    }
+
+    /* Projects Visual Showcase */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      page-break-inside: avoid;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .project-role {
+      font-size: 12px;
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .status-badge {
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .status-live {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .status-private {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .status-restricted {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    .project-desc {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    /* Visual Mockup Frame Slots */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .screenshot-frame {
+      background: #070d1b;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 8px 10px;
+      height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .window-dots {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #f87171; }
+    .dot-yellow { background: #fbbf24; }
+    .dot-green { background: #34d399; }
+
+    .window-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--text-dim);
+      margin-left: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .frame-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4px;
+    }
+
+    .frame-center .slot-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .frame-center .slot-caption {
+      font-size: 8.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .slot-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      color: var(--cyan);
+      align-self: flex-end;
+    }
+
+    .project-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11.5px;
+      padding-top: 8px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tech-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      background: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #94a3b8;
+      border: 1px solid #1e293b;
+    }
+
+    .link-pills {
+      display: flex;
+      gap: 8px;
+    }
+
+    .link-pills a {
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--cyan-light);
+    }
+
+    .link-pills a:hover {
+      text-decoration: underline;
+    }
+
+    /* Experience & Education */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .timeline-card {
+      background: var(--card-bg);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+    }
+
+    .tl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .tl-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .tl-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--cyan);
+    }
+
+    .tl-org {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    .tl-bullets {
+      font-size: 12px;
+      color: #cbd5e1;
+      padding-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    .tl-bullets li {
+      margin-bottom: 4px;
+    }
+
+    /* Print Formatting */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+
+      .avatar-wrapper {
+        border-color: #0284c7 !important;
+        box-shadow: none !important;
+      }
+
+      .profile-info h1 {
+        color: #0f172a !important;
+      }
+
+      .summary-text, .project-desc, .tl-bullets {
+        color: #334155 !important;
+      }
+
+      .skill-category, .project-card, .timeline-card {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+      }
+
+      .screenshot-frame {
+        background: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+      }
+
+      .frame-center .slot-title {
+        color: #0f172a !important;
+      }
+
+      .pill, .tech-tag {
+        background: #e2e8f0 !important;
+        color: #1e293b !important;
+        border-color: #cbd5e1 !important;
+      }
+
+      .section-title {
+        color: #0284c7 !important;
+        border-bottom-color: #cbd5e1 !important;
+      }
+
+      .project-name, .tl-title {
+        color: #0f172a !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .avatar-wrapper {
+        margin: 0 auto;
+      }
+      .screenshots-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Action Toolbar (Hidden when printing) -->
+    <div class="top-toolbar no-print">
+      <a href="/" class="btn btn-secondary">
+        &larr; Kembali ke Portofolio Web
+      </a>
+      <div style="display: flex; gap: 10px;">
+        <button onclick="window.print()" class="btn btn-primary">
+          Cetak / Simpan PDF (Ctrl + P)
+        </button>
+      </div>
+    </div>
+
+    <!-- Header Profile with Portrait -->
+    <header class="header-profile">
+      <div class="avatar-wrapper">
+        <img src="danang.jpg" alt="Rahadyan Danang Susetyo Pranawa" class="avatar-img">
+      </div>
+      <div class="profile-info">
+        <h1>Rahadyan Danang Susetyo Pranawa</h1>
+        <div class="role-badge">SOFTWARE ENGINEER // BACKEND & CLOUD SYSTEMS</div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span>Telepon:</span>
+            <a href="https://wa.me/6281235163528">081235163528</a>
+          </div>
+          <div class="contact-item">
+            <span>Email:</span>
+            <a href="mailto:dewaruci393@gmail.com">dewaruci393@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>Portofolio:</span>
+            <a href="https://rahdansuwa24.github.io/" target="_blank">rahdansuwa24.github.io</a>
+          </div>
+          <div class="contact-item">
+            <span>GitHub:</span>
+            <a href="https://github.com/Rahdansuwa24" target="_blank">github.com/Rahdansuwa24</a>
+          </div>
+          <div class="contact-item">
+            <span>LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/rahadyan-danang-susetyo-pranawa-083140294/" target="_blank">Rahadyan Danang</a>
+          </div>
+          <div class="contact-item">
+            <span>Lokasi:</span>
+            <span>Tuwowo 1 / 21, Surabaya</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Mahasiswa Sarjana Terapan (D4) Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS) yang berfokus pada Backend Engineering, Cloud Systems Architecture, dan Generative AI integration. Berpengalaman merancang arsitektur microservices berbasis Docker dan Caddy reverse proxy pada Azure VM, mengelola basis data relasional terdistribusi (MySQL dan TiDB Cloud Serverless), serta membangun microservices inferensi AI medis multimodal (ONNX Runtime dan Orthanc PACS). Memiliki reputasi akademik kuat dengan predikat Cum Laude (IPK 3.72/4.00).
+      </p>
+    </section>
+
+    <!-- Technical Skills Grid -->
+    <section>
+      <div class="section-title">Technical Expertise</div>
+      <div class="skills-block">
+        <div class="skill-category">
+          <div class="skill-cat-title">Backend & Cloud</div>
+          <div class="skill-pills">
+            <span class="pill">Node.js</span>
+            <span class="pill">Express.js</span>
+            <span class="pill">Docker & Compose</span>
+            <span class="pill">Caddy Proxy</span>
+            <span class="pill">Azure VM</span>
+            <span class="pill">Linux</span>
+            <span class="pill">RESTful API</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Database & Storage</div>
+          <div class="skill-pills">
+            <span class="pill">MySQL</span>
+            <span class="pill">TiDB Serverless</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Cloudflare R2</span>
+            <span class="pill">Sequelize ORM</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Frontend & Mobile</div>
+          <div class="skill-pills">
+            <span class="pill">React 18</span>
+            <span class="pill">Vite</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">Flutter</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">AI & Medical Domain</div>
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">ONNX Runtime</span>
+            <span class="pill">LLM RAG</span>
+            <span class="pill">Orthanc PACS</span>
+            <span class="pill">DICOM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects with Screenshot Slots (Recap Projects 2026) -->
+    <section>
+      <div class="section-title">Featured Projects & Live Visual Showcases</div>
+      <div class="projects-container">
+
+        <!-- Project 1: Trash Management (Live) -->
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-name">1. Trash Management: Role-Based Waste Logistics</div>
+              <div class="project-role">Backend Developer & Architecture Refactorer | Aug 2024 - Nov 2024</div>
+            </div>
+            <span class="status-badge status-live">Live Deployment</span>
+          </div>
+          <div class="project-desc">
+            Sistem pelaporan sampah kota dan komersial berbasis peran (Warga, Mitra Logistik, Administrator). Memisahkan monolit menjadi arsitektur modular Controller-Service-Repository dengan isolasi memori kontainer 512MB di Azure VM serta routing dinamis Caddy.
+          </div>
+          <!-- Screenshot Slots -->
+          <div class="screenshots-grid">
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">trashmanage-sby.duckdns.org/report</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 1: Pelaporan Sampah Warga</div>
+                <div class="slot-caption">Form unggah media, geolokasi real-time, dan status matching mitra</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 1]</div>
+            </div>
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">trashmanage-sby.duckdns.org/admin</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 2: Dashboard Admin & Dispatch</div>
+                <div class="slot-caption">Manajemen akun, monitoring armada truk, dan pembekuan perangkat</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 2]</div>
+            </div>
+          </div>
+          <div class="project-meta-row">
+            <div class="tech-list">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Caddy</span>
+            </div>
+            <div class="link-pills">
+              <a href="http://trashmanage-sby.duckdns.org/" target="_blank">Live: trashmanage-sby.duckdns.org</a>
+              <a href="https://github.com/Rahdansuwa24/trash-management" target="_blank">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: EduPortal Pro (Live) -->
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-name">2. EduPortal Pro: Multi-Role School Management & AI Analytics</div>
+              <div class="project-role">Fullstack Developer | Jun 2026 - Present (Projek Semester 6 PENS)</div>
+            </div>
+            <span class="status-badge status-live">Live Deployment (Port 8085)</span>
+          </div>
+          <div class="project-desc">
+            Portal manajemen akademik multi-peran (Admin, Guru, Siswa, Wali Murid) dengan arsitektur Role-Based Access Control (RBAC). Dilengkapi presensi berbasis batasan waktu otomatis, analitik visual riwayat nilai 6 semester, serta parser PDF kurikulum dengan AI untuk pembuatan kuis otomatis.
+          </div>
+          <!-- Screenshot Slots -->
+          <div class="screenshots-grid">
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">eduportal-sekolah.duckdns.org:8085/dashboard</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 1: Multi-Role Portal & Presensi</div>
+                <div class="slot-caption">Antarmuka peran ganda dan pelacakan presensi terikat waktu</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 1]</div>
+            </div>
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">eduportal-sekolah.duckdns.org:8085/ai-quiz</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 2: Analitik 6 Semester & AI Quiz</div>
+                <div class="slot-caption">Grafik tren nilai siswa dan hasil generate kuis otomatis dari file PDF</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 2]</div>
+            </div>
+          </div>
+          <div class="project-meta-row">
+            <div class="tech-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Generative AI</span>
+            </div>
+            <div class="link-pills">
+              <a href="http://eduportal-sekolah.duckdns.org:8085/" target="_blank">Live: eduportal-sekolah.duckdns.org:8085</a>
+              <a href="https://github.com/Rahdansuwa24/Eduportal" target="_blank">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: MAPTA (Live) -->
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-name">3. MAPTA: Internship Administration Platform</div>
+              <div class="project-role">Backend Developer & System Architect | Jul 2025 - Nov 2025</div>
+            </div>
+            <span class="status-badge status-live">Live Deployment (Port 8086)</span>
+          </div>
+          <div class="project-desc">
+            Aplikasi administrasi magang Dinas Perpustakaan Provinsi Jawa Timur mulai dari pendaftaran peserta hingga penerbitan sertifikat digital. Menggunakan headless Chromium (Puppeteer) dengan antrean p-queue concurrency=1 untuk mencegah lonjakan RAM, streaming PDF langsung ke Cloudflare R2 tanpa membebani disk VM.
+          </div>
+          <!-- Screenshot Slots -->
+          <div class="screenshots-grid">
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">mapta.duckdns.org:8086/internship</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 1: Alur Pendaftaran & Seleksi Magang</div>
+                <div class="slot-caption">Verifikasi berkas peserta dan pencocokan divisi penempatan</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 1]</div>
+            </div>
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">mapta.duckdns.org:8086/certificates</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 2: Engine Generate Sertifikat Otomatis</div>
+                <div class="slot-caption">Rendering Puppeteer dengan stream langsung ke Cloudflare R2</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 2]</div>
+            </div>
+          </div>
+          <div class="project-meta-row">
+            <div class="tech-list">
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Puppeteer</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">TiDB Cloud</span>
+              <span class="tech-tag">Cloudflare R2</span>
+            </div>
+            <div class="link-pills">
+              <a href="http://mapta.duckdns.org:8086/" target="_blank">Live: mapta.duckdns.org:8086</a>
+              <a href="https://github.com/Rahdansuwa24/Mapta" target="_blank">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: LuLuSin (Private Deployment) -->
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-name">4. LuLuSin: UTBK-SNBT Exam Simulation Platform</div>
+              <div class="project-role">Mobile & API Developer | Mar 2025 - Jul 2025 (Projek Semester 4 PENS)</div>
+            </div>
+            <span class="status-badge status-private">Private / Local Deployment</span>
+          </div>
+          <div class="project-desc">
+            Platform simulasi tryout UTBK-SNBT dengan klien mobile Flutter dan web React. Menyediakan sistem penskoran otomatis real-time, in-memory cache 24 jam untuk silabus ujian, dan connection pooling Sequelize pada TiDB Cloud Serverless.
+          </div>
+          <!-- Screenshot Slots -->
+          <div class="screenshots-grid">
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">lulusin-app.local/exam</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 1: Antarmuka Tryout Mobile Flutter</div>
+                <div class="slot-caption">Timer simulasi ketat, navigasi soal, dan lembar jawaban interaktif</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 1]</div>
+            </div>
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">lulusin-app.local/analytics</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 2: Analitik Skor & Pembahasan Soal</div>
+                <div class="slot-caption">Kalkulasi skor otomatis IRT dan riwayat performa subtes</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 2]</div>
+            </div>
+          </div>
+          <div class="project-meta-row">
+            <div class="tech-list">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">TiDB Cloud</span>
+              <span class="tech-tag">Sequelize</span>
+            </div>
+            <div class="link-pills">
+              <a href="https://github.com/Rahdansuwa24/mobile-lulusin" target="_blank">Mobile Repo</a>
+              <a href="https://github.com/Rahdansuwa24/LuLuSin-API" target="_blank">API Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: VISMED-PACS (Restricted Clinical) -->
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-name">5. VISMED-PACS: Medical Image AI Inference System</div>
+              <div class="project-role">PACS Developer | Mar 2026 - Sekarang (Partnership RSI Ahmad Yani)</div>
+            </div>
+            <span class="status-badge status-restricted">Restricted Clinical Network</span>
+          </div>
+          <div class="project-desc">
+            Sistem inferensi AI medis multimodal untuk eliminasi diagnostic delays pada alur kerja radiologi rumah sakit. Mengintegrasikan microservices ONNX Runtime dan asisten LLM RAG dengan server Orthanc PACS untuk deteksi otomatis Tuberkulosis (TB), kardiomegali, dan pendarahan intrakranial.
+          </div>
+          <!-- Screenshot Slots -->
+          <div class="screenshots-grid">
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">orthanc-pacs.internal/studies</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 1: Routing Orthanc PACS & DICOM Console</div>
+                <div class="slot-caption">Manajemen C-STORE, metadata DICOM, dan antrean triase radiologi</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 1]</div>
+            </div>
+            <div class="screenshot-frame">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-url">vismed-ai.internal/heatmap</span>
+              </div>
+              <div class="frame-center">
+                <div class="slot-title">Screenshot Slot 2: Heatmap Patologi Multimodal</div>
+                <div class="slot-caption">Visualisasi Grad-CAM X-Ray dada untuk deteksi TB dan kardiomegali</div>
+              </div>
+              <div class="slot-tag">[Preview Slot 2]</div>
+            </div>
+          </div>
+          <div class="project-meta-row">
+            <div class="tech-list">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">ONNX Runtime</span>
+              <span class="tech-tag">Orthanc PACS</span>
+              <span class="tech-tag">DICOM</span>
+              <span class="tech-tag">LLM RAG</span>
+            </div>
+            <div class="link-pills">
+              <a href="https://github.com/Rahdansuwa24/vismed-PACS" target="_blank">GitHub Repo</a>
+              <span style="font-size: 11px; color: #64748b;">(Akses Klinis Terbatas)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <div class="section-title">Work & Engineering Experience</div>
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">PACS Developer (Final Project Partnership)</span>
+            <span class="tl-period">Mar 2026 - Sekarang</span>
+          </div>
+          <div class="tl-org">Rumah Sakit Islam Ahmad Yani, Surabaya</div>
+          <ul class="tl-bullets">
+            <li>Mengembangkan VISMED, sistem inferensi AI medis multimodal untuk mempercepat alur kerja radiologi dan mengurangi keterlambatan diagnosa klinis.</li>
+            <li>Mengintegrasikan microservices ONNX Runtime dan asisten RAG berbasis LLM dengan Orthanc PACS untuk otomatisasi penapisan citra medis dan perutean metadata DICOM.</li>
+            <li>Mempercepat triase klinis untuk deteksi patologi kritis seperti Tuberkulosis (TB), kardiomegali, dan pendarahan intrakranial.</li>
+            <li>Menerapkan transfer learning dan fine-tuning model vision untuk memproses modalitas hibrida (X-Ray, CT-Scan, dan ECG).</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">Backend Developer Intern</span>
+            <span class="tl-period">Jul 2025 - Nov 2025</span>
+          </div>
+          <div class="tl-org">Dinas Perpustakaan Provinsi Jawa Timur, Surabaya</div>
+          <ul class="tl-bullets">
+            <li>Merancang arsitektur sistem dan skema basis data relasional MySQL untuk aplikasi administrasi magang MAPTA.</li>
+            <li>Mengembangkan RESTful APIs modular di Express.js untuk pertukaran data yang terstruktur dan aman.</li>
+            <li>Membangun infrastruktur pelaporan dan visualisasi KPI menggunakan SQL dan Tableau untuk visibilitas tim operasional.</li>
+            <li>Mengotomasi pembuatan sertifikat massal dengan isolasi konkurensi antrean p-queue guna melindungi stabilitas memori server.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">Politeknik Elektronika Negeri Surabaya (PENS)</span>
+            <span class="tl-period">Jul 2026 - Jul 2027 (Perkiraan)</span>
+          </div>
+          <div class="tl-org">Sarjana Terapan (D4) Teknik Informatika | IPK: 3.70 / 4.01</div>
+          <ul class="tl-bullets">
+            <li>Fokus pada Rekayasa Perangkat Lunak, Arsitektur Sistem Terdistribusi, dan Integrasi Generative AI.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">Politeknik Elektronika Negeri Surabaya (PENS)</span>
+            <span class="tl-period">Jul 2023 - Jul 2026</span>
+          </div>
+          <div class="tl-org">Diploma 3 (D3) Teknik Informatika | IPK: 3.72 / 4.00 (Dengan Pujian Cum Laude)</div>
+          <ul class="tl-bullets">
+            <li>Lulus dengan predikat Dengan Pujian (Cum Laude). Menyelesaikan projek rekayasa end-to-end termasuk EduPortal Pro, LuLuSin, dan Trash Management.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">SMAN 2 Surabaya</span>
+            <span class="tl-period">Jul 2019 - Jul 2023</span>
+          </div>
+          <div class="tl-org">Jurusan Matematika dan Ilmu Pengetahuan Alam (MIPA) | Nilai Akhir: 87.80 / 100.00</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizational Experience & Achievements -->
+    <section>
+      <div class="section-title">Organization & Achievements</div>
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">Staff Ahli Departemen Sosial dan Masyarakat</span>
+            <span class="tl-period">Jul 2024 - Jul 2025</span>
+          </div>
+          <div class="tl-org">Himpunan Mahasiswa PENS Sumenep</div>
+          <ul class="tl-bullets">
+            <li>Mengkoordinasikan kegiatan pengabdian masyarakat, bakti sosial, dan program literasi teknologi untuk komunitas mahasiswa.</li>
+          </ul>
+        </div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <span class="tl-title">Sertifikasi & Kemampuan Bahasa</span>
+            <span class="tl-period">2026</span>
+          </div>
+          <ul class="tl-bullets">
+            <li><strong>TOEFL:</strong> Skor 453 (PENS Language Center, 2026).</li>
+            <li><strong>Bahasa:</strong> Bahasa Indonesia (Native), Bahasa Jawa (Native), Bahasa Inggris (Technical / Professional Working Proficiency).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
